@@ -226,8 +226,8 @@ public class Application {
 				System.out.print("Valor: ");
 				Double valAdd = sc.nextDouble();
 				
-				
-				
+				gerente.addSaldo(numeroConta, valAdd);
+				System.out.println("Valor adicionado com sucesso!");
 			}
 				
 			System.out.println();

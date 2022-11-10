@@ -159,6 +159,15 @@ public class Gerente {
 		Cliente cliente = recuperarCliente(numeroConta);
 		cliente.setSaldo(cliente.getSaldo() + val);
 		
+		if (cliente.getTipoConta().equals(TipoConta.PF)) {
+			int i = Helpers.varrerPorNumeroConta(this.clientesPf, numeroConta);
+			this.clientesPf[i] = cliente;
+			
+		}
+		else if (cliente.getTipoConta().equals(TipoConta.PJ)) {
+			int i = Helpers.varrerPorNumeroConta(this.clientesPj, numeroConta);
+			this.clientesPj[i] = cliente;
+		}
 	}
 	
 }
