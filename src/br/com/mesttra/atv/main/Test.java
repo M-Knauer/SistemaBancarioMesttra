@@ -11,7 +11,7 @@ public class Test {
 	}
 	
 	public static ClientePj gerarClientePj() {
-		String[] nomes = {"Joao", "caio", "luan"};
+		String[] nomes = {"Joao", "caio"};
 		return new ClientePj("pj", 545, 878456,  2550.0,  2000.0,
 				 "4545",nomes , "2165", "asdvs");
 	}

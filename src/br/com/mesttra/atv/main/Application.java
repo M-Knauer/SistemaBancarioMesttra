@@ -228,6 +228,18 @@ public class Application {
 				
 				gerente.addSaldo(numeroConta, valAdd);
 				System.out.println("Valor adicionado com sucesso!");
+				
+				break;
+			case 8:
+				
+				System.out.print("Numero da conta: ");
+				numeroConta = sc.next();
+				
+				System.out.print("Novo telefone: ");
+				int altTelefone = sc.nextInt();
+				
+				gerente.editar(numeroConta, altTelefone);
+				System.out.println("Telefone alterado com sucesso!");
 			}
 				
 			System.out.println();

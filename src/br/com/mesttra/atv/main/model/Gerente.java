@@ -169,5 +169,21 @@ public class Gerente {
 			this.clientesPj[i] = cliente;
 		}
 	}
+
+	public void editar(String numeroConta, int altTelefone) {
+		
+		Cliente c = recuperarCliente(numeroConta);
+		c.setTelefone(altTelefone);
+		
+		if (c.getTipoConta().equals(TipoConta.PF)) {
+			int i = Helpers.varrerPorNumeroConta(this.clientesPf, numeroConta);
+			this.clientesPf[i] = c;
+		}
+		else if (c.getTipoConta().equals(TipoConta.PJ)) {
+			int i = Helpers.varrerPorNumeroConta(this.clientesPj, numeroConta);
+			this.clientesPj[i] = c;
+		}
+		
+	}
 	
 }
